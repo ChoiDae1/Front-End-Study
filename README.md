@@ -14,5 +14,5 @@
 <strong> 노마드코더 링크 </strong>
 <li><a href="https://nomadcoders.co/react-for-beginners">ReactJS로 영화 웹 서비스 만들기</a></li>
 <li><a href="https://nomadcoders.co/react-hooks-introduction">실전형 리액트 Hooks 10개</a></li>
-<li><a href="https://https://nomadcoders.co/nwitter">트위터 클론 코딩</a></li>
+<li><a href="https://nomadcoders.co/nwitter">트위터 클론 코딩</a></li>
 
