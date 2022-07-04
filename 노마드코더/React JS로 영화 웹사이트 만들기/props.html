@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="root"></div>
+    </body>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        function Btn({text, fontsize, Click_f}) {
+            console.log(text)
+            return ( 
+                <button onClick={Click_f} style={{backgroundColor: "tomato",
+                                color: "white",
+                                padding: "10px 20px",
+                                border: 0,
+                                fontSize: fontsize,
+                                borderRadius:10}}>
+                {text}
+                </button>
+            )
+        }
+        const MemorizedBtn = React.memo(Btn); // 똑같은 부분 re-rendering 방지
+        MemorizedBtn.propTypes = {
+            text: PropTypes.string.isRequired,
+            fontsize: PropTypes.number.isRequired,
+            Click_f: PropTypes.func
+        }
+        function App(){
+            const [value, setValue] = React.useState("Save Changes");
+            const onClick = () => setValue("Revert Changes")
+            return (
+                <div>
+                    <MemorizedBtn text={value} fontsize={16} Click_f={onClick}/>
+                    <MemorizedBtn text={"Continue"} fontsize={14}/>
+                </div>
+            )
+        }
+        const root = document.getElementById("root");
+        ReactDOM.render(<App />, root);
+    </script>
+</html>
