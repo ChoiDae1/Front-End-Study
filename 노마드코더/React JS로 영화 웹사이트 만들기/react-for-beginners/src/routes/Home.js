@@ -24,6 +24,7 @@ function Home(){
                 summary={movie.summary} 
                 genres={movie.genres} 
                 CoverImage={movie.medium_cover_image}
+                year={movie.year}
                 />
             ))
             }

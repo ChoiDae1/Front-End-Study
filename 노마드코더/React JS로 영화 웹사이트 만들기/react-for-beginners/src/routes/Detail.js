@@ -28,6 +28,7 @@ function Detail(){
                 title={movieDetail.title} 
                 DescriptionFull={movieDetail.description_full} 
                 genres={movieDetail.genres} 
+                year={movieDetail.year}
                 CoverImage={movieDetail.large_cover_image}
                 />
             </div>       
