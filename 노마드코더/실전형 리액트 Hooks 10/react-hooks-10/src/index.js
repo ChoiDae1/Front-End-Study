@@ -1,4 +1,4 @@
-import UseNetworkApp from "./hooks/useNetwork";
+import UseAxoisApp from "./hooks/useAxios";
 import { createRoot } from "react-dom/client";
 
 
@@ -6,7 +6,7 @@ import { createRoot } from "react-dom/client";
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 root.render(
-    <UseNetworkApp />
+    <UseAxoisApp />
 )
 
 
